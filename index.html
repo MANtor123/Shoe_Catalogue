@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel='stylesheet' href='shoe.css'>
+<script type="text/javascript" src="script/handlebars-v4.0.5.js"> </script>
 <title> Shoe Catalogue </title>
 </head>
 <body>
@@ -34,6 +35,38 @@
   </div>
 </div>
 
+
+
+<script id='myTemplate' type='text/handlebars-x'>
+
+<select>
+<option class='brands' disabled selected>BRANDS</option>
+{{#each shoeBrandKeys}}
+<option class='brands' value='{{this}}'>{{this}}</option>
+{{/each}}
+</select><br><br>
+
+<select>
+<option class='size' disabled selected>SIZE</option>
+{{#each shoeSizeKeys}}
+<option class='size' value='{{this}}'>{{this}}</option>
+{{/each}}
+</select><br><br>
+
+<select>
+<option class='color' disabled selected>COLOR</option>
+{{#each shoeColorKeys}}
+<option class='brands' value='{{this}}'>{{this}}</option>
+{{/each}}
+</select>
+
+</script>
+
+<input type='button' id='button' value='Select'> </input>
+
+<div class='block'>
+</div>
+<div class='output'> </div>
 <script src="shoe.js"> </script>
 </body>
 </html>
