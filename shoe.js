@@ -1,10 +1,8 @@
-// var button = document.querySelector('#button');
+var button = document.querySelector('#button');
 var display = document.querySelector('.block');
- var myTemplate = document.querySelector('#myTemplate');
- var temp = Handlebars.compile(myTemplate.innerHTML);
-// var brand = document.querySelector('.brands');
-// var size = document.querySelector('.size');
-// var color = document.querySelector('.color');
+var myTemplate = document.querySelector('#myTemplate');
+var temp = Handlebars.compile(myTemplate.innerHTML);
+var output = document.querySelector('.output')
 
 var shoes = [
         {
@@ -54,8 +52,8 @@ display.innerHTML = results;
 
 
 
-// button.addEventListener('click',function(){
-//
-//
-//
-// })
+button.addEventListener('click',function(){
+
+
+
+})
