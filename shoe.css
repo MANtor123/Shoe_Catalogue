@@ -123,10 +123,18 @@ body {
     display: block;
     display: inline-flex;;
     margin: 65px;
-    border: 100px solid pink;
 }
 
 #button{
   margin: -55px;
-  font-size: xx-large;
+  font-size: medium;
+}
+
+.style{
+  border: 2px solid white;
+  padding: 40px;
+  background-color: white;
+  width: 1140px;
+  text-align: center;
+  margin: 10px;
 }
