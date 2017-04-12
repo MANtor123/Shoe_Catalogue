@@ -38,7 +38,6 @@
 
 
 <script id='myTemplate' type='text/handlebars-x'>
-
 <select>
 <option class='brands' disabled selected>BRANDS</option>
 {{#each shoeBrandKeys}}
@@ -59,15 +58,37 @@
 <option class='brands' value='{{this}}'>{{this}}</option>
 {{/each}}
 </select>
-
 </script>
+
 
 <div class='style'>
 <div class='block'>
 </div>
-<input type='button' id='button' value='Select'> </input>
+<input type='button' id='button' value='Search'> </input>
 </div>
 
+<script class='searchTemplate' type='text/handlebars-x'>
+<table>
+<tr>
+<th> BRAND </th>
+<th> SIZE </th>
+<th> PRICE </th>
+<th> COLOR </th>
+<th> STOCK </th>
+</tr>
+
+{{#each shoes}}
+<tr>
+<td>{{brand}}</td>
+<td>{{size}}</td>
+<td>{{price}}</td>
+<td>{{color}}</td>
+<td>{{in_stock}}</td>
+</tr>
+{{/each}}
+
+</table>
+</script>
 <div class='output'> </div>
 <script src="shoe.js"> </script>
 </body>

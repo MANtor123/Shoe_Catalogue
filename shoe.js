@@ -1,9 +1,15 @@
-var button = document.querySelector('#button');
-var display = document.querySelector('.block');
+//first template
 var myTemplate = document.querySelector('#myTemplate');
 var temp = Handlebars.compile(myTemplate.innerHTML);
-var output = document.querySelector('.output')
+var display = document.querySelector('.block');
 
+//second template
+var search = document.querySelector('#button');
+var searchTemplate = document.querySelector('.searchTemplate');
+var searchTemp = Handlebars.compile(searchTemplate.innerHTML);
+var output = document.querySelector('.output');
+
+//list of the shoes
 var shoes = [
         {
             color : 'white',
@@ -24,9 +30,19 @@ var shoes = [
           color : 'black',
           price :345,
           brand : 'Allstar',
-          size : 6
+          size : 6,
+          in_stock : 7
+        },
+
+        {
+          color : 'white',
+          price : 500,
+          brand : 'Allstar',
+          size : 3,
+          in_stock : 7
         },
 ];
+
 
 var colors = [];
 
@@ -52,8 +68,8 @@ display.innerHTML = results;
 
 
 
-button.addEventListener('click',function(){
+search.addEventListener('click',function(){
+var searchResults = searchTemp({shoes : shoes})
+output.innerHTML = searchResults;
 
-
-
-})
+});
