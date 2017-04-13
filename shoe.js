@@ -18,7 +18,7 @@ var shoes = [
             in_stock : 5,
             brand : 'Nike',
             size : 4,
-            image : '/home/bootcamp/IMG_8742.JPG'
+
         },
         {
             color : 'grey',
@@ -47,37 +47,42 @@ var shoes = [
 ];
 
 
-var colors = [];
+function populateDropDowns(){
 
-for(var i=0; i<shoes.length; i++){
-  var shoe = shoes[i]
-  colors.push(shoe.color);
+  var colors = [];
+
+  for(var i=0; i<shoes.length; i++){
+    var shoe = shoes[i]
+    colors.push(shoe.color);
+  }
+
+  var brands = []
+  for(var i=0; i<shoes.length; i++){
+    var shoe = shoes[i]
+    brands.push(shoe.brand)
+  }
+
+  var size = []
+  for(var i=0; i<shoes.length; i++){
+    var shoe = shoes[i]
+    size.push(shoe.size)
+  }
+
+  var results = temp({shoeColorKeys:colors,shoeBrandKeys:brands,shoeSizeKeys:size})
+  display.innerHTML = results;
+
 }
+//calling function
+populateDropDowns();
 
-var brands = []
-for(var i=0; i<shoes.length; i++){
-  var shoe = shoes[i]
-  brands.push(shoe.brand)
-}
-
-var size = []
-for(var i=0; i<shoes.length; i++){
-  var shoe = shoes[i]
-  size.push(shoe.size)
-}
-
-var results = temp({shoeColorKeys:colors,shoeBrandKeys:brands,shoeSizeKeys:size})
-display.innerHTML = results;
-
-
-//all button
+//showing all the stock button
 all.addEventListener('click',function(){
 var searchResults = searchTemp({shoes : shoes})
 output.innerHTML = searchResults;
 
 });
 
-//add button
+//adding stock button
 var stockMap = {}
 add.addEventListener('click', function(){
 var brand = document.querySelector('#brand')
@@ -99,13 +104,16 @@ if(!brandName == ''){
       in_stock : (quantity.value)
     };
     shoes.push(names);
-    stockMap[brandName] = names
+    stockMap[brandName] = names;
   }
   else{
       names.in_stock += (qty.value)
   }
 }
+
 var searchResults = searchTemp({shoes : shoes})
 output.innerHTML = searchResults;
+
+populateDropDowns();
 
 });
