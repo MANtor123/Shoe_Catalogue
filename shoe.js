@@ -88,7 +88,7 @@ var price = document.querySelector('#price')
 
 var brandName = brand.value
 
-if(brandName !== ''){
+if(!brandName == ''){
   var names = stockMap[brandName];
   if(names == undefined){
     names ={
@@ -96,13 +96,13 @@ if(brandName !== ''){
       color : color.value,
       size : sizes.value,
       price : price.value,
-      in_stock : Number (quantity.value)
+      in_stock : (quantity.value)
     };
     shoes.push(names);
     stockMap[brandName] = names
   }
   else{
-      names.in_stock += Number(qty.value)
+      names.in_stock += (qty.value)
   }
 }
 var searchResults = searchTemp({shoes : shoes})
