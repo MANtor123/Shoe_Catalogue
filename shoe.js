@@ -80,38 +80,32 @@ output.innerHTML = searchResults;
 //add button
 var stockMap = {}
 add.addEventListener('click', function(){
-var brand = document.querySelector('.brand')
-var color = document.querySelector('.color')
-var sizes = document.querySelector('.size')
-var quantity = document.querySelector('.qty')
-var price = document.querySelector('.price')
+var brand = document.querySelector('#brand')
+var color = document.querySelector('#color')
+var sizes = document.querySelector('#size')
+var quantity = document.querySelector('#qty')
+var price = document.querySelector('#price')
 
 var brandName = brand.value
 
 if(brandName !== ''){
-  var name = stockMap[brandName];
-  if(name == undefined){
-    name ={
-      brand : brand.value
-      color : color.value
-      size : sizes.value
-      price : price.value
+  var names = stockMap[brandName];
+  if(names == undefined){
+    names ={
+      brand : brand.value,
+      color : color.value,
+      size : sizes.value,
+      price : price.value,
       in_stock : Number (quantity.value)
     };
-    shoes.push(name);
-    stockMap[brandName] = name
+    shoes.push(names);
+    stockMap[brandName] = names
   }
   else{
-      name.qty += Number(qty.value)
+      names.in_stock += Number(qty.value)
   }
 }
 var searchResults = searchTemp({shoes : shoes})
 output.innerHTML = searchResults;
-});
-
-
-
-
-
 
 });
