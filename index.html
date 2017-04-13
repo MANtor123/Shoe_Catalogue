@@ -4,6 +4,7 @@
 <link rel='stylesheet' href='shoe.css'>
 <script type="text/javascript" src="script/handlebars-v4.0.5.js"> </script>
 <title> Shoe Catalogue </title>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
 <body>
 <h1 class='h1'><b> Sneaker Town </b></h1>
@@ -60,11 +61,11 @@
 </select>
 </script>
 
-
 <div class='style'>
 <div class='block'>
 </div>
-<input type='button' id='button' value='Search'> </input>
+
+<input type='button' id='button' value='ALL'> </input>
 </div>
 
 <script class='searchTemplate' type='text/handlebars-x'>
@@ -89,7 +90,28 @@
 
 </table>
 </script>
+
+<div class='fix'>
 <div class='output'> </div>
+</div>
+
+<h2>Add new stock</h2>
+BRAND: <input type="text" name="name" id="brand" class='inline' placeholder="enter brand" value=''>
+<br>
+<br>
+SIZE: <input type="text" name="price" id="size" class='inline' placeholder="enter size" value=''>
+<br>
+<br>
+QUANTITY: <input type="text" name="qty" id="qty" class='inline' placeholder="enter quantity" value=''>
+<br>
+<br>
+PRICE: <input type="text" name="name" id="price" class='inline' placeholder="enter price" value=''>
+<br>
+<br>
+COLOR: <input type="text" name="price" id="color" class='inline' placeholder="enter color" value=''>
+<br>
+<br>
+<input type='button' id='add' value="Add" class="add">
 <script src="shoe.js"> </script>
 </body>
 </html>
