@@ -36,14 +36,6 @@ var shoes = [
           in_stock : 7
         },
 
-        {
-          color : 'white',
-          price : 500,
-          brand : 'Allstar',
-          size : 3,
-          in_stock : 7
-
-        },
 ];
 
 
