@@ -36,36 +36,85 @@ var shoes = [
           in_stock : 7
         },
 
+
 ];
 
+function uniqBrand(){
+var brands = [];
+var brandMap = {};
+
+for(var i=0; i<shoes.length; i++){
+  var shoe = shoes[i]
+  if(brandMap[shoe.brand] === undefined){
+    brandMap[shoe.brand] = shoe.brand;
+    brands.push(shoe.brand);
+  }
+
+}
+return brands;
+};
+
+function uniqColor(){
+var colors = [];
+var colorMap = {};
+
+for(var i=0; i<shoes.length; i++){
+  var shoe = shoes[i]
+  if(colorMap[shoe.color] === undefined){
+    colorMap[shoe.color] = shoe.color;
+    colors.push(shoe.color);
+  }
+}
+return colors;
+};
+
+function uniqSize(){
+var size = [];
+var sizeMap = {};
+
+for(var i=0; i<shoes.length; i++){
+  var shoe = shoes[i]
+  if(sizeMap[shoe.size] === undefined){
+    sizeMap[shoe.size] = shoe.size;
+    size.push(shoe.size);
+  }
+
+}
+return size;
+};
 
 function populateDropDowns(){
 
-  var colors = [];
+  var brand = uniqBrand();
+  var colors = uniqColor();
+  var size = uniqSize();
 
-  for(var i=0; i<shoes.length; i++){
-    var shoe = shoes[i]
-    colors.push(shoe.color);
-  }
 
-  var brands = []
-  for(var i=0; i<shoes.length; i++){
-    var shoe = shoes[i]
-    brands.push(shoe.brand)
-  }
+  brand.sort(),
+  size.sort(),
+  colors.sort(function(a,b){
+  return a - b;
+    });
 
-  var size = []
-  for(var i=0; i<shoes.length; i++){
-    var shoe = shoes[i]
-    size.push(shoe.size)
-  }
-
-  var results = temp({shoeColorKeys:colors,shoeBrandKeys:brands,shoeSizeKeys:size})
+    //var results = temp({shoeColorKeys:colors})
+  var results = temp({shoeColorKeys:colors,shoeBrandKeys:brand,shoeSizeKeys:size})
   display.innerHTML = results;
 
 }
 //calling function
 populateDropDowns();
+
+// function sort(shoes){
+// var bra =[]
+// var col = []
+// var siz = []
+//
+// var brandMap = {}
+// for(var i = 0; i < shoes.length; i++){
+//   var brandShoe = shoes[i]
+//   if(brandMap[brand.name])
+// }
+// }
 
 //showing all the stock button
 all.addEventListener('click',function(){
