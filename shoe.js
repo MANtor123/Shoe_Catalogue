@@ -96,7 +96,7 @@ function populateDropDowns(){
   return a - b;
     });
 
-    //var results = temp({shoeColorKeys:colors})
+
   var results = temp({shoeColorKeys:colors,shoeBrandKeys:brand,shoeSizeKeys:size})
   display.innerHTML = results;
 
@@ -104,17 +104,7 @@ function populateDropDowns(){
 //calling function
 populateDropDowns();
 
-// function sort(shoes){
-// var bra =[]
-// var col = []
-// var siz = []
-//
-// var brandMap = {}
-// for(var i = 0; i < shoes.length; i++){
-//   var brandShoe = shoes[i]
-//   if(brandMap[brand.name])
-// }
-// }
+
 
 //showing all the stock button
 all.addEventListener('click',function(){
