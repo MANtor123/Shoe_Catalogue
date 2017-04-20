@@ -106,10 +106,10 @@ populateDropDowns();
 
 //filtering
 function myFunction(){
-var myBrand = document.querySelector('#myBrand')
+var myBrand = document.querySelector('#myBrand');
 
-console.log(myBrand.value)
 myBrand.value;
+console.log(myBrand.value)
 
 var filterBrand = [];
 for(var i=0; i<shoes.length; i++){
@@ -118,10 +118,10 @@ if(shoe.brand === myBrand.value){
     filterBrand.push(shoe)
 }
   }
-  var searchResults = searchTemp({shoeBrandKeys:filterBrand})
+  console.log(filterBrand)
+  var searchResults = searchTemp({shoes:filterBrand})
   output.innerHTML = searchResults;
-// alert(myBrand.value)
-}
+};
 
 
 //showing all the stock button
