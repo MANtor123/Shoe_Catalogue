@@ -91,8 +91,8 @@ function populateDropDowns(){
 
 
   brand.sort(),
-  size.sort(),
-  colors.sort(function(a,b){
+  colors.sort(),
+  size.sort(function(a,b){
   return a - b;
     });
 
@@ -104,6 +104,24 @@ function populateDropDowns(){
 //calling function
 populateDropDowns();
 
+//filtering
+function myFunction(){
+var myBrand = document.querySelector('#myBrand')
+
+console.log(myBrand.value)
+myBrand.value;
+
+var filterBrand = [];
+for(var i=0; i<shoes.length; i++){
+  var shoe = shoes[i]
+if(shoe.brand === myBrand.value){
+    filterBrand.push(shoe)
+}
+  }
+  var searchResults = searchTemp({shoeBrandKeys:filterBrand})
+  output.innerHTML = searchResults;
+// alert(myBrand.value)
+}
 
 
 //showing all the stock button
