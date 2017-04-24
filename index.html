@@ -46,14 +46,14 @@
 {{/each}}
 </select><br><br>
 
-<select>
+<select id='mySize'>
 <option class='size' disabled selected>SIZE</option>
 {{#each shoeSizeKeys}}
 <option class='size' value='{{this}}'>{{this}}</option>
 {{/each}}
 </select><br><br>
 
-<select>
+<select id='myColor'>
 <option class='color' disabled selected>COLOR</option>
 {{#each shoeColorKeys}}
 <option class='brands' value='{{this}}'>{{this}}</option>
@@ -76,6 +76,7 @@
 <th> PRICE </th>
 <th> COLOR </th>
 <th> STOCK </th>
+<th> IMAGE </th>
 </tr>
 
 {{#each shoes}}
@@ -85,6 +86,7 @@
 <td>{{price}}</td>
 <td>{{color}}</td>
 <td>{{in_stock}}</td>
+<td><img src={{image}} class='img'></td>
 </tr>
 {{/each}}
 

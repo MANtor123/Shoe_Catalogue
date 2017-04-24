@@ -18,6 +18,7 @@ var shoes = [
             in_stock : 5,
             brand : 'Nike',
             size : 4,
+            image : 'images/whitenike.jpg'
 
         },
         {
@@ -25,7 +26,8 @@ var shoes = [
             price : 275,
             in_stock : 3,
             brand : 'Vans',
-            size : 5
+            size : 5,
+            image : 'images/greyvan.jpg'
         },
 
         {
@@ -33,10 +35,9 @@ var shoes = [
           price :345,
           brand : 'Allstar',
           size : 6,
-          in_stock : 7
+          in_stock : 7,
+          image : 'images/black.jpg'
         },
-
-
 ];
 
 function uniqBrand(){
@@ -109,16 +110,14 @@ function myFunction(){
 var myBrand = document.querySelector('#myBrand');
 
 myBrand.value;
-console.log(myBrand.value)
-
 var filterBrand = [];
+
 for(var i=0; i<shoes.length; i++){
   var shoe = shoes[i]
 if(shoe.brand === myBrand.value){
     filterBrand.push(shoe)
 }
   }
-  console.log(filterBrand)
   var searchResults = searchTemp({shoes:filterBrand})
   output.innerHTML = searchResults;
 };
