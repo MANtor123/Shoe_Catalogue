@@ -93,27 +93,36 @@
 </table>
 </script>
 
-<div class='fix'>
+<div class='Fix'>
 <div class='output'> </div>
 </div>
 
+<div class='model'>
 <h2>Add new stock</h2>
-BRAND: <input type="text" name="brand" id="brand" class='inline' placeholder="enter brand" value=''>
+  <div class="fix">
+<lable>BRAND:</lable>
+<input type="text" name="brand" id="brand" class='inline' placeholder="enter brand" value=''></input>
+</div>
 <br>
+  <div class="fix">
+&nbsp;<lable>SIZE:</lable>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="" id="size" class='inline' placeholder="enter size" value=''></input>
+</div>
 <br>
-SIZE: <input type="text" name="" id="size" class='inline' placeholder="enter size" value=''>
+<div class="fix">
+QUANTITY:&nbsp; <input type="number" name="qty" id="qty" class='inline' placeholder="enter quantity" value=''>
+</div>
 <br>
+<div class="fix">
+<lable>PRICE:</lable> <input type="text" name="name" id="price" class='inline' placeholder="enter price" value=''>
+</div>
 <br>
-QUANTITY: <input type="text" name="qty" id="qty" class='inline' placeholder="enter quantity" value=''>
-<br>
-<br>
-PRICE: <input type="text" name="name" id="price" class='inline' placeholder="enter price" value=''>
-<br>
-<br>
-COLOR: <input type="text" name="price" id="color" class='inline' placeholder="enter color" value=''>
-<br>
+<div class="fix">
+<lable>COLOR:</lable> <input type="text" name="price" id="color" class='inline' placeholder="enter color" value=''>
+</div>
 <br>
 <input type='button' id='add' value="Add" class="add">
+</div>
 <script src="shoe.js"> </script>
 </body>
 </html>

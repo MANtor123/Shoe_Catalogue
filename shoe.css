@@ -1,5 +1,7 @@
 body {
   text-align: center;
+  background-color:#f9f9f9;
+
 }
 
 .h1 {
@@ -139,7 +141,7 @@ image{
   height: 50px;
 }
 
-.fix {
+.Fix {
   position: absolute;
     height: 200px;
     width: 400px;
@@ -155,4 +157,22 @@ image{
 .img {
   height: 60px;
   width: 60%;
+}
+
+.model{
+  padding: 16px;
+  border: solid grey;
+  display: block;
+  background-color: #d3d3d3;
+}
+
+.fix{
+padding: 0.5em;
+height: 27px;
+width: 91%;
+}
+
+.fix label {
+    display: inline-block;
+    width: 150px;
 }
