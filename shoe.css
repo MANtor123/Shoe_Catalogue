@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color:#f9f9f9;
+  background-color:#f5f5dc;
 
 }
 
@@ -164,6 +164,7 @@ image{
   border: solid grey;
   display: block;
   background-color: #d3d3d3;
+
 }
 
 .fix{
@@ -175,4 +176,9 @@ width: 91%;
 .fix label {
     display: inline-block;
     width: 150px;
+}
+
+.fixed {
+  margin-left: 78px;
+  padding: inherit;
 }
